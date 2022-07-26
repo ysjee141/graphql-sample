@@ -1,0 +1,22 @@
+type User {
+    id: Int!
+    name: String!
+    age: Int
+}
+
+type Car {
+    id: Int!
+    name: String!
+    price: Int!
+}
+
+type Query {
+    getUser(id: Int!): User
+    getUsers: [User]
+    getCars: [Car]
+}
+
+type Mutation {
+    saveUser(name: String!, age: Int!): User
+    saveCar(name: String!, price: Int!): Car
+}
